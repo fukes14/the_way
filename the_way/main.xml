@@ -1,0 +1,71 @@
+<Game>
+	<title>The Way</title>
+	<room id="2">
+		<title>A Bedroom</title>
+		<d>You wake up in a small bedroom, its just a bed, a desk with the chair ajar, a 
+bottle lay on the floor. You struggle to your feet, head pounding from a hangover. As you 
+get up the bottle rolls to the closed door to the east.</d>
+		
+		<east>4</east>
+		
+		<item>
+			<title>Bottle</title>
+	<d>The bottle is mostly empty, it was a bottle of "Mothers Homemade Moonshine".</d>
+			<take>true</take>
+			<use>You Take a drink and feel a warmth flow through you.</use>
+		</item>
+		
+		<item>
+			<title>Bed</title>
+			<d>The bed looks made, like it wasn't slept in.</d>
+			<take>(Defaults to false)</take>
+		</item>
+		
+		<item>
+			<title>Desk</title>
+			<d>The Desk has a computer on it</d>
+			<uscript>D:/puzzle.lua</uscript>
+
+		</item>
+		
+		<item>
+			<title>Chair</title>
+			<d>The chair looks like someone was sitting in it and left without pushing it 
+back into place</d>
+			<use>You sit in the chair but its uncomfortable so you get back up.</use>
+		</item>
+		
+		<check>(basically is there another person near him to show the bottle to
+					if not then he takes a sip and comments on its bad taste
+					else check to see if person has something to say about bottle, if not
+					then say i dont know that brand.)
+		</check>
+		
+	</room>
+	<room id="4">
+		<title>Hallway</title>
+		<d>You walk into the hallway and shut the door behind you. There is a door to the 
+east at the end of the hall. Another door is to your north, and a painting 
+on the wall.</d>
+
+		<west>2</west>
+		<north>100</north>
+		
+		<check>(basically is there another person near him to show the bottle to
+					if not then he takes a sip and comments on its bad taste
+					else check to see if person has something to say about bottle, if not 
+					then say i dont know that brand.)
+		</check>
+		<item>
+			<title>painting</title>
+			<d>The painting is pretty but you dont know why.</d>
+		</item>
+	</room>
+	
+	<room id="100">
+		<title>temp room</title>
+		<d>error temp room</d>
+		<east>6</east>
+		<south>4</south>
+	</room>
+</Game>
