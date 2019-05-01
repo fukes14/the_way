@@ -34,11 +34,19 @@ public class Engine
 		
 		/*******************************/
 		
-		//Get user folder path
-		i();
-		System.out.println("Please input the game folder path:");
-		c();
-		path = scan.nextLine();
+		try
+		{
+			//Gets the path from the terminal
+			path = args[0];
+		}
+		catch(Exception e)
+		{		
+			//Get user folder path
+			i();
+			System.out.println("Please input the game folder path:");
+			c();
+			path = scan.nextLine();
+		}
 		
 		//----Call xml parser to parse the doc to be read and pass in the file path from user-----
 		jdomDoc = ReadXMLFile.Read(path);
